@@ -12,11 +12,14 @@ const Expenses = (props) => {
     // console.log('Expenses.js');
     // console.log(selectedYear);
     setSelectedValue(selectedYear);
-  }
+  };
 
   return (
     <Card className="expenses">
-      <ExpensesFilter onSelectValue={selectedValue} onFilteredChange={filteredChangeHandler} />
+      <ExpensesFilter
+        onSelectValue={selectedValue}
+        onFilteredChange={filteredChangeHandler}
+      />
       <ExpenseItem
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
